@@ -1,5 +1,8 @@
-<h1>Edit your article</h1>
-<%= link_to 'remove', delete_path(), method: :delete, data: { confirm: 'are you sure?' } %>
+<h1><%= @article.title %>
+  <small>
+    <%= link_to 'remove', delete_path(), method: :delete, data: { confirm: 'are you sure?' } %>
+  </small>
+</h1>
 <br>
 <%= form_for @article do |f| %>
   <%= f.label :tile %>
