@@ -1,0 +1,26 @@
+<body>
+<head>
+  <title>Wikinimous</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Roboto+Slab">
+  <link rel="stylesheet" media="all" href="/assets/application-5776a201bb68cd8ec7d5cc0fc550547175d90c0016d4c48beb9e93169260ec7d.css" />
+  <script src="/assets/application-92860e49193c50329d83498bab321452f1fd33cd60b631edf846cf14896ea2b5.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="e74lpItffo0m0uDNwTy+aFVl0qNVrpQyB0xJPmkI1R0y3EuXWZatca/P1g99j0pW7f0of23xHCWJ5Cq3/JZoUQ==" />
+</head>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/">Wikinimous</a>
+  </div>
+
+<h1>Last Articles</h1>
+
+<% @articles.each do |article| %>
+    <article>
+      <h2><%= link_to article.title, article_path(article)%></h2>
+    </article>
+<%end %>
+
+
+
+</body>

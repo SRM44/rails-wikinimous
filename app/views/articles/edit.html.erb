@@ -1,0 +1,12 @@
+<h1>Edit your article</h1>
+<%= link_to 'remove', delete_path(), method: :delete, data: { confirm: 'are you sure?' } %>
+<br>
+<%= form_for @article do |f| %>
+  <%= f.label :tile %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content%>
+  <%= f.text_field :content %>
+
+  <%= f.submit %>
+<% end %>
